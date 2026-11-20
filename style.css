@@ -1,3 +1,18 @@
+/* ShopEase: main stylesheet, shared by every page.
+   Sections are numbered to match the labels in the HTML files.
+   Search for a number + name (e.g. "6. PRODUCTS") to jump to it.
+   Full guide: README.md
+
+   1. Font & reset          7.  Banner
+   2. Global styles         8.  Small banners
+   3. Header & navigation   9.  Banner 3
+   4. Hero                  10. Newsletter
+   5. Features              11. Footer
+   6. Products              12. Media queries (tablet, phone)
+*/
+
+/* ==================== 1. FONT & RESET ==================== */
+
 @font-face {
   font-family: 'League Spartan';
   src: url('fonts/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
@@ -5,6 +20,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +32,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Global Styles */
+/* ==================== 2. GLOBAL STYLES ==================== */
 
 h1 {
   font-size: 50px;
@@ -53,6 +69,8 @@ p {
 .section-m1 {
   margin: 40px 0;
 }
+
+/* --- Buttons --- */
 button.normal {
   font-size: 14px;
   font-weight: 600;
@@ -81,7 +99,8 @@ button.outline {
 body {
   width: 100%;
 }
-/* Header Start */
+
+/* ==================== 3. HEADER & NAVIGATION  (#header) ==================== */
 
 #header {
   display: flex;
@@ -131,6 +150,8 @@ body {
   bottom: -4px;
   left: 20px;
 }
+
+/* --- Mobile icons + close button (hidden on desktop) --- */
 #mobile {
   display: none;
 }
@@ -138,7 +159,8 @@ body {
   display: none;
 }
 
-/* Home Page */
+/* ==================== 4. HERO  (#hero) ==================== */
+
 #hero {
   background-image: url('img/hero1.png');
   height: 90vh;
@@ -158,6 +180,7 @@ body {
 #hero h1 {
   color: #c71585;
 }
+
 #hero button {
   border: 0;
   background-image: url('img/button.png');
@@ -169,6 +192,9 @@ body {
   font-weight: 700;
   font-size: 15px;
 }
+
+/* ==================== 5. FEATURES  (#feature) ==================== */
+
 #feature {
   background-color: whitesmoke;
   display: flex;
@@ -189,6 +215,7 @@ body {
 #feature .fe-box:hover {
   box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
 }
+
 #feature .fe-box h6 {
   display: inline-block;
   padding: 9px 8px 6px 8px;
@@ -197,6 +224,8 @@ body {
   color: #c71585;
   background-color: #cce7d0;
 }
+
+/* --- Label color for each box --- */
 #feature .fe-box:nth-child(2) h6 {
   background-color: #f6dbf6;
 }
@@ -217,15 +246,20 @@ body {
   margin-bottom: 10px;
 }
 
+/* ==================== 6. PRODUCTS  (.product1) ==================== */
+
 .product1 {
   text-align: center;
 }
+
 .product1 .pro-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 20px;
 }
+
+/* --- Product card --- */
 .product1 .pro {
   position: relative;
   width: 18%;
@@ -241,10 +275,13 @@ body {
 .product1 .pro:hover {
   box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.06);
 }
+
 .product1 .pro > img {
   width: 100%;
   border-radius: 20px;
 }
+
+/* --- Card text: brand, name, stars, price --- */
 .product1 .pro .des {
   text-align: start;
   padding: 10px 0;
@@ -268,6 +305,8 @@ body {
   font-weight: 700;
   color: #c71585;
 }
+
+/* --- Add-to-cart button --- */
 .product1 .pro .cart {
   width: 40px;
   height: 40px;
@@ -286,6 +325,8 @@ body {
   width: 20px;
   height: 20px;
 }
+
+/* ==================== 7. BANNER  (#banner) ==================== */
 
 #banner {
   display: flex;
@@ -315,6 +356,9 @@ body {
   background-color: #c71585;
   color: #fff;
 }
+
+/* ==================== 8. SMALL BANNERS  (#sm-banner) ==================== */
+
 #sm-banner {
   display: flex;
   justify-content: space-between;
@@ -332,6 +376,7 @@ body {
   background-position: center;
   padding: 30px;
 }
+
 #sm-banner .banner-box2 {
   background-image: url('img/banner/b10.jpg');
 }
@@ -351,16 +396,21 @@ body {
   font-weight: 500;
   padding-bottom: 15px;
 }
+
 #sm-banner .banner-box:hover button {
   background-color: #c71585;
   border: 1px solid #c71585;
 }
+
+/* ==================== 9. BANNER 3  (#banner3) ==================== */
+
 #banner3 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0 80px;
 }
+
 #banner3 .banner-box {
   display: flex;
   flex-direction: column;
@@ -376,6 +426,7 @@ body {
   padding: 20px;
   margin-bottom: 20px;
 }
+
 #banner3 .banner-box2 {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -396,6 +447,8 @@ body {
   font-weight: 800;
   font-size: 15px;
 }
+
+/* ==================== 10. NEWSLETTER  (#newsletter) ==================== */
 
 #newsletter {
   display: flex;
@@ -421,6 +474,7 @@ body {
 #newsletter p span {
   color: #ffbd27;
 }
+
 #newsletter .form {
   display: flex;
   width: 40%;
@@ -443,11 +497,15 @@ body {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
+/* ==================== 11. FOOTER  (footer) ==================== */
+
 footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 footer .col {
   display: flex;
   flex-direction: column;
@@ -475,6 +533,7 @@ footer a {
 footer .follow {
   margin-top: 20px;
 }
+
 footer .install .row img {
   border: 1px solid #c71585;
   border-radius: 4px;
@@ -483,12 +542,13 @@ footer .install img {
   margin: 10px 0 15px 0;
 }
 
-/* Footer social icons */
+/* --- Social icons --- */
 footer .follow .icon {
   display: flex;
   gap: 0.75rem;
   margin-top: 0.25rem;
 }
+
 footer .follow .icon a {
   display: flex;
   align-items: center;
@@ -505,25 +565,32 @@ footer .follow .icon img {
   height: 0.7rem;
   transition: 0.3s ease;
 }
+
 footer .follow .icon a:hover {
   background-color: #c71585;
   border-color: #c71585;
   transform: translateY(-3px);
 }
-/* turns the icon white on hover */
+
 footer .follow .icon a:hover img {
   filter: brightness(0) invert(1);
 }
+
 footer .copyright {
   width: 100%;
   text-align: center;
 }
 
-/* Media Queries */
+/* ==================== 12. MEDIA QUERIES ==================== */
+
+/* ---------- Tablet: 799px and below ---------- */
 @media (max-width: 799px) {
+  /* --- 2. Global --- */
   .section-p1 {
     padding: 40px 40px;
   }
+
+  /* --- 3. Header: slide-out mobile menu --- */
   #navbar {
     display: flex;
     flex-direction: column;
@@ -549,30 +616,33 @@ footer .copyright {
   #mobile {
     display: flex;
     align-items: center;
-    gap: 20px; /* space between the cart bag and the menu icon */
+    gap: 20px;
   }
   #mobile a {
     display: flex;
-    padding: 5px; /* bigger area to tap on a phone */
+    padding: 5px;
   }
   #bar {
     width: 20px;
     height: 20px;
   }
-  /* "#navbar #close" beats "#navbar li", which would make it position: relative */
+
   #navbar #close {
     display: initial;
     position: absolute;
     top: 30px;
     left: 30px;
   }
-  /* no pink hover underline under the close icon */
+
   #navbar #close a::after {
     content: none;
   }
+
   #lg-bag {
     display: none;
   }
+
+  /* --- 4. Hero --- */
   #hero {
     height: 70vh;
     padding: 0 80px;
@@ -580,10 +650,13 @@ footer .copyright {
     background-size: cover;
   }
 
+  /* --- 5. Features --- */
   #feature .fe-box {
     width: 180px;
     margin: 15px 15px;
   }
+
+  /* --- 6. Products --- */
   .product1 .pro {
     min-width: 250px;
     margin: 15px;
@@ -591,18 +664,25 @@ footer .copyright {
   .product1 .pro-container {
     justify-content: center;
   }
+
+  /* --- 7. Banner --- */
   #banner {
     height: 20vh;
   }
+
+  /* --- 8. Small banners --- */
   #sm-banner {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
   #sm-banner .banner-box {
     min-width: 100%;
     height: 30vh;
   }
+
+  /* --- 9. Banner 3 --- */
   #banner3 {
     padding: 0 40px;
   }
@@ -610,21 +690,30 @@ footer .copyright {
     width: 28%;
     border-radius: 10px;
   }
+
+  /* --- 10. Newsletter --- */
   #newsletter .form {
     width: 70%;
   }
 }
+
+/* ---------- Phone: 477px and below ---------- */
 @media (max-width: 477px) {
+  /* --- 2. Global --- */
   .section-p1 {
     padding: 20px;
   }
+  /* --- 3. Header --- */
   #header {
     padding: 10px 30px;
   }
+
   #navbar {
     right: -200px;
     width: 200px;
   }
+
+  /* --- 2. Headings --- */
   h1 {
     font-size: 38px;
   }
@@ -632,6 +721,7 @@ footer .copyright {
     font-size: 32px;
   }
 
+  /* --- 4. Hero --- */
   #hero {
     height: 70vh;
     background-size: cover;
@@ -639,28 +729,39 @@ footer .copyright {
     padding: 0 20px;
   }
 
+  /* --- 5. Features --- */
   #feature .fe-box {
     width: 155px;
     margin: 0 0 15px 0;
   }
+
+  /* --- 6. Products --- */
   .product1 .pro {
     width: 100%;
   }
+
+  /* --- 7. Banner --- */
   #banner {
     height: 40vh;
   }
+
+  /* --- 8. Small banners --- */
   #sm-banner .banner-box {
     height: 40vh;
   }
   #sm-banner .banner-box2 {
     margin-top: 20px;
   }
+
+  /* --- 9. Banner 3 --- */
   #banner3 {
     padding: 0 20px;
   }
   #banner3 .banner-box {
     width: 100%;
   }
+
+  /* --- 10. Newsletter --- */
   #newsletter {
     padding: 40px 20px;
   }

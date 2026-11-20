@@ -1,11 +1,13 @@
-// Script for navigation bar
+/* ShopEase: main script, shared by every page. Full guide: README.md */
+
+/* ==================== MOBILE MENU (open / close) ==================== */
 const bar = document.getElementById('bar');
 const nav = document.getElementById('navbar');
 const close = document.getElementById('close');
 
 if (bar) {
   bar.addEventListener('click', (e) => {
-    e.preventDefault(); // stop the "#" link from jumping to the top of the page
+    e.preventDefault();
     nav.classList.add('active');
   });
 }
