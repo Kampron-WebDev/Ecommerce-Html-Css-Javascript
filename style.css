@@ -131,6 +131,12 @@ body {
   bottom: -4px;
   left: 20px;
 }
+#mobile {
+  display: none;
+}
+#close {
+  display: none;
+}
 
 /* Home Page */
 #hero {
@@ -211,16 +217,16 @@ body {
   margin-bottom: 10px;
 }
 
-#product1 {
+.product1 {
   text-align: center;
 }
-#product1 .pro-container {
+.product1 .pro-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 20px;
 }
-#product1 .pro {
+.product1 .pro {
   position: relative;
   width: 18%;
   min-width: 200px;
@@ -232,37 +238,37 @@ body {
   margin: 15px 0;
   transition: 0.2s ease;
 }
-#product1 .pro:hover {
+.product1 .pro:hover {
   box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.06);
 }
-#product1 .pro > img {
+.product1 .pro > img {
   width: 100%;
   border-radius: 20px;
 }
-#product1 .pro .des {
+.product1 .pro .des {
   text-align: start;
   padding: 10px 0;
 }
-#product1 .pro .des span {
+.product1 .pro .des span {
   color: #606063;
   font-size: 12px;
 }
-#product1 .pro .des h5 {
+.product1 .pro .des h5 {
   padding: 7px 0;
   font-size: 14px;
   color: #1a1a1a;
 }
-#product1 .pro .des .star img {
+.product1 .pro .des .star img {
   width: 13px;
   height: 12px;
 }
-#product1 .pro .des h4 {
+.product1 .pro .des h4 {
   padding-top: 7px;
   font-size: 15px;
   font-weight: 700;
   color: #c71585;
 }
-#product1 .pro .cart {
+.product1 .pro .cart {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -276,7 +282,7 @@ body {
   right: 10px;
 }
 
-#product1 .pro > a img {
+.product1 .pro > a img {
   width: 20px;
   height: 20px;
 }
@@ -511,4 +517,154 @@ footer .follow .icon a:hover img {
 footer .copyright {
   width: 100%;
   text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 799px) {
+  .section-p1 {
+    padding: 40px 40px;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+  #navbar.active {
+    right: 0px;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* space between the cart bag and the menu icon */
+  }
+  #mobile a {
+    display: flex;
+    padding: 5px; /* bigger area to tap on a phone */
+  }
+  #bar {
+    width: 20px;
+    height: 20px;
+  }
+  /* "#navbar #close" beats "#navbar li", which would make it position: relative */
+  #navbar #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  /* no pink hover underline under the close icon */
+  #navbar #close a::after {
+    content: none;
+  }
+  #lg-bag {
+    display: none;
+  }
+  #hero {
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+    background-size: cover;
+  }
+
+  #feature .fe-box {
+    width: 180px;
+    margin: 15px 15px;
+  }
+  .product1 .pro {
+    min-width: 250px;
+    margin: 15px;
+  }
+  .product1 .pro-container {
+    justify-content: center;
+  }
+  #banner {
+    height: 20vh;
+  }
+  #sm-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #sm-banner .banner-box {
+    min-width: 100%;
+    height: 30vh;
+  }
+  #banner3 {
+    padding: 0 40px;
+  }
+  #banner3 .banner-box {
+    width: 28%;
+    border-radius: 10px;
+  }
+  #newsletter .form {
+    width: 70%;
+  }
+}
+@media (max-width: 477px) {
+  .section-p1 {
+    padding: 20px;
+  }
+  #header {
+    padding: 10px 30px;
+  }
+  #navbar {
+    right: -200px;
+    width: 200px;
+  }
+  h1 {
+    font-size: 38px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+
+  #hero {
+    height: 70vh;
+    background-size: cover;
+    background-position: 75%;
+    padding: 0 20px;
+  }
+
+  #feature .fe-box {
+    width: 155px;
+    margin: 0 0 15px 0;
+  }
+  .product1 .pro {
+    width: 100%;
+  }
+  #banner {
+    height: 40vh;
+  }
+  #sm-banner .banner-box {
+    height: 40vh;
+  }
+  #sm-banner .banner-box2 {
+    margin-top: 20px;
+  }
+  #banner3 {
+    padding: 0 20px;
+  }
+  #banner3 .banner-box {
+    width: 100%;
+  }
+  #newsletter {
+    padding: 40px 20px;
+  }
+  #newsletter .form {
+    width: 100%;
+  }
 }
