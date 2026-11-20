@@ -360,7 +360,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url('img/banner/b7.jpg');
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('img/banner/sales.jpg');
   min-width: 30%;
   height: 30vh;
   background-size: cover;
@@ -369,10 +371,14 @@ body {
   margin-bottom: 20px;
 }
 #banner3 .banner-box2 {
-  background-image: url('img/banner/b4.jpg');
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('img/banner/shoes.jpg');
 }
 #banner3 .banner-box3 {
-  background-image: url('img/banner/b18.jpg');
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('img/banner/T-shirts.jpg');
 }
 #banner3 h2 {
   color: #fff;
@@ -430,4 +436,79 @@ body {
   white-space: nowrap;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer .logo {
+  margin-bottom: 30px;
+}
+footer h4 {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+footer .install .row img {
+  border: 1px solid #c71585;
+  border-radius: 4px;
+}
+footer .install img {
+  margin: 10px 0 15px 0;
+}
+
+/* Footer social icons */
+footer .follow .icon {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+footer .follow .icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #cce7d0;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+footer .follow .icon img {
+  width: 0.7rem;
+  height: 0.7rem;
+  transition: 0.3s ease;
+}
+footer .follow .icon a:hover {
+  background-color: #c71585;
+  border-color: #c71585;
+  transform: translateY(-3px);
+}
+/* turns the icon white on hover */
+footer .follow .icon a:hover img {
+  filter: brightness(0) invert(1);
+}
+footer .copyright {
+  width: 100%;
+  text-align: center;
 }
